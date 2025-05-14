@@ -21,6 +21,7 @@ As imagens são carregadas do diretório `imagens/`, convertidas para tons de ci
 imagem = Image.open(caminho).convert('L')
 imagem = imagem.resize((50, 50))
 vetor = np.asarray(imagem).flatten()
+
 3. Criação dos Vetores de Dados
 dados: contém os vetores das imagens;
 
@@ -29,10 +30,8 @@ rotulos: contém os nomes das classes (cada subpasta representa uma classe).
 4. Divisão dos Dados
 Os dados são divididos em treino e teste utilizando:
 
-python
-Copiar
-Editar
 train_test_split(dados, rotulos, test_size=0.2, random_state=42)
+
 5. Padronização e Redução de Dimensionalidade
 Padronização com StandardScaler
 
@@ -61,9 +60,6 @@ Coloque suas imagens organizadas em subpastas dentro de um diretório chamado im
 
 Exemplo:
 
-markdown
-Copiar
-Editar
 imagens/
   gato/
     img1.jpg
@@ -78,10 +74,8 @@ Verifique os resultados impressos e as imagens previstas.
 📌 Requisitos
 Instale as dependências com:
 
-bash
-Copiar
-Editar
 pip install numpy matplotlib pillow scikit-learn
+
 📘 Observações
 O classificador é sensível à qualidade e quantidade das imagens.
 
